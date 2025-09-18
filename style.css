@@ -1,0 +1,415 @@
+/* Basis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --primary-color: #033b4a;
+    --secondary-color: #20c997;
+    --gray: #4a4a4d;
+    --bg-primary: #ecf0f3;
+}
+html {
+    scroll-behavior: smooth;
+}
+section .text-center h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+/* Section One : Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 5px 2rem 3px;
+    z-index: 1;
+    background-color: #fff;
+}
+header .logo {
+    font-size: 24px;
+}
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+header nav {
+    width: 60%;
+    font-size: 16px;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+header ul li a:hover {
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+/* Section Two : Main */
+main {
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main #main-text {
+    letter-spacing: 2px;
+}
+#main p span {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+#main p:nth-of-type(2) {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+#main h1 {
+    font-size: 55px;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+#main img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+#main .social {
+    margin: 1rem 0;
+}
+#main .social a i {
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--gray);
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+#main .social a i:hover {
+    transform: scale(0.85);
+}
+#main a.btn-success {
+    background-color: var(--secondary-color);
+    border: none;
+}
+#main a.btn-success:hover {
+    background-color: #15a076;
+}
+/* Section Three : About */
+#about {
+    letter-spacing: 1px;
+}
+#about h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+}
+#about .row div h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+#about .row div h3 span {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+#disabled-in-lg {
+    display: none;
+}
+/* Section Four : Skills */
+#skills {
+    background-color: var(--primary-color);
+    color: white;
+}
+#skills h2 {
+    display: inline-block;
+}
+#skills h2 span {
+    color: var(--secondary-color);
+}
+#skills h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+#skills h2 i {
+    font-size: 28px;
+}
+#skills .container div:nth-of-type(2) {
+    background-color: var(--gray);
+    padding: 10px;
+}
+#skills .container div:nth-of-type(2) div {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+/* #skills .container div:nth-of-type(2) div:hover {
+    box-shadow: 10px 10px 10px #37ad760c;
+} */
+.skilled-card {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#skills .container div:nth-of-type(2) div img {
+    width: 100px;
+    height: 100px;
+}
+/* Section Five : Services */
+#services {
+    background-color: var(--bg-primary);
+}
+#services .container div h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-block;
+}
+#services .container div h2 span {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+#services .card-collection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+#services .card-collection .card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 5px 5px #37ad760c;
+    flex: 1 1 clamp(250px, 30%, 350px); 
+    /* 👆 الكارت بيكبر ويصغر بين 250px و350px 
+        معتمد على عرض الشاشة */
+    transition: all 0.5s ease;
+}
+#services .card-collection .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#services .card-collection .card img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-top: 0.5rem;
+}
+#services .card-collection .card .card-body h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+/* Section Six : Portfolio */
+#portfolio {
+    background-color: var(--primary-color);
+    color: white;
+}
+#portfolio .container .text-center {
+    letter-spacing: 2px;
+}
+#portfolio h2 {
+    font-weight: bold;
+    display: inline-block;
+}
+#portfolio h2 span {
+    color: var(--secondary-color);
+}
+#portfolio .card-collection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#portfolio .card-collection .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 5px #20c9970c;
+    flex: 1 1 clamp(260px, 38%, 300px);
+}
+#portfolio .card-collection .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    border-bottom: 2px solid #ccc;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+#portfolio .card-collection .card img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+#portfolio .card-collection .card .card-body h5 {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: bolder;
+}
+#portfolio .card-collection .card .card-body a {
+    font-size: 16px;
+    color: #38e0aa;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#portfolio .card-collection .card .card-body a:hover {
+    color: var(--secondary-color);
+    letter-spacing: 1.25px;
+}
+/* Section Seven : Contact */
+#contact {
+    background-color: var(--bg-primary);
+    letter-spacing: 1px;
+}
+#contact h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+}
+#contact h2 span {
+    color: var(--secondary-color);
+}
+#contact form {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+#contact form button {
+    background-color: var(--secondary-color);
+    border: none;
+}
+#contact form button:hover {
+    background-color: #15a076;
+}
+/* Section Eight : Footer */
+footer {
+    letter-spacing: 1px;
+}
+
+/* Media */
+@media (max-width: 625px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+    main {
+        height: 140vh;
+    }
+    #main {
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+    #main img {
+        width: 300px;
+        height: 300px;
+        margin-top: 2rem;
+    }
+    #main h1 {
+        font-size: 40px;
+    }
+    #main p, #main .social a i {
+        font-size: 18px;
+    }
+    #main .social a i {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+    #about .row div h3 {
+        font-size: 20px;
+    }
+    #disabled-in-lg {
+    display: block;
+    }
+    #skills .container div:nth-of-type(2) div img {
+        width: 80px;
+        height: 80px;
+    }
+    #skills .container div:nth-of-type(2) div h3 {
+        font-size: 20px;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+@media (min-width: 626px) and (max-width: 800px) {
+    header {
+        font-size: 16px;
+        padding: 5px 1rem 3px;
+    }
+    header .logo {
+        font-size: 20px;
+    }
+    header nav {
+        width: 70%;
+    }
+    #main #main-text {
+        letter-spacing: 1px;
+    }
+    #main p span, #main p:nth-of-type(2), #main .social a i {
+        font-size: 18px;
+    }
+    #main h1 {
+        font-size: 30px;
+    }
+    #main .social a i {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+    #main img {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (min-width: 801px) and (max-width: 1024px) {
+    #main p span, #main p:nth-of-type(2), #main .social a i {
+        font-size: 20px;
+    }
+    #main h1 {
+        font-size: 35px;
+    }
+    #main img {
+        width: 350px;
+        height: 350px;
+    }
+}
