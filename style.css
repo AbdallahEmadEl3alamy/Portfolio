@@ -125,7 +125,7 @@ main {
 #about {
     letter-spacing: 1px;
 }
-#about h2, #about h5 {
+#about h2, #about h4 {
     color: var(--primary-color);
     font-weight: bold;
     display: inline-block;
@@ -414,3 +414,4 @@ footer {
     }
 
 }
+
