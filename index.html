@@ -41,7 +41,7 @@
                 <a href="#about" class="btn btn-success">About Me <i class="fa-solid fa-circle-arrow-down"></i></a>
             </div>
             <div id="main-img">
-                <img src="images/me.jpg" alt="me">
+                <img src="images/me.png" alt="me">
             </div>
         </section>
     </main>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-lg-4 col-sm-12">
                 <hr id="disabled-in-lg">
-                <p><b>Age</b> : 20</p>
+                <p id="age"><b>Age</b> : <span id="myAge"></span></p>
                 <hr>
                 <p><b>Email</b> : abdallahemad9876@gmail.com</p>
                 <hr>
@@ -237,7 +237,8 @@
             <div class="text-center p-4">
                 <h2><i class="fa-solid fa-envelope-open-text"></i> <!--<i class="fa-solid fa-headset"></i>--> Get In <span>Touch</span></h2>
             </div>
-            <form action="" method="POST" class="w-75 m-auto">
+            <form action="https://api.web3forms.com/submit" method="POST" class="w-75 m-auto">
+                <input type="hidden" name="access_key" value="edcfee69-4515-4e81-baa2-012956a043d1">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -275,6 +276,4 @@
         document.getElementById("myAge").textContent = calculateAge("2005-07-28");
     </script>
 </body>
-
 </html>
-
