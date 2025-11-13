@@ -329,6 +329,7 @@ footer {
     header nav {
         width: 100%;
         margin-top: 10px;
+        font-size: 13px;
     }
     main {
         height: 140vh;
@@ -412,4 +413,5 @@ footer {
         width: 350px;
         height: 350px;
     }
+
 }
